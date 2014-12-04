@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Twainsoft.Cuberry.Articles
+﻿namespace Twainsoft.Cuberry.Articles
 {
-    class ArticleModule
+    public class ArticleModule
     {
     }
 }
