@@ -1,7 +1,9 @@
-﻿using Microsoft.Practices.Prism.Modularity;
+﻿using System;
+using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.Unity;
 using P2.Cuberry.Framework.Helper;
+using Twainsoft.Cuberry.Articles.Properties;
 
 namespace Twainsoft.Cuberry.Articles
 {
@@ -12,19 +14,19 @@ namespace Twainsoft.Cuberry.Articles
 
         public void Show()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void Hide()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public string ModuleName
         {
             get
             {
-                return Properties.Settings.Default.ModuleName;
+                return Settings.Default.ModuleName;
             }
         }
 
@@ -32,12 +34,17 @@ namespace Twainsoft.Cuberry.Articles
         {
             this.container = container;
             this.regionManager = regionManager;
-            ModuleRepository.Modules.Add(this.ModuleName, this);
+            ModuleRepository.Modules.Add(ModuleName, this);
         }
 
         public void Initialize()
         {
-            throw new System.NotImplementedException();
+            RegisterViewsAndServices();
+        }
+
+        protected void RegisterViewsAndServices()
+        {
+            //this.container.RegisterType<IEmptyListView, EmptyListView>();
         }
     }
 }

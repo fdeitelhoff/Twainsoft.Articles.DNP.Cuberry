@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using Twainsoft.Cuberry.Articles.BusinessEntities;
 
 namespace Twainsoft.Cuberry.Articles.Services
@@ -7,7 +8,7 @@ namespace Twainsoft.Cuberry.Articles.Services
     {
         public ObservableCollection<Article> All()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

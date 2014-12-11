@@ -1,5 +1,6 @@
 ﻿using P2.Cuberry.Framework.BOLBase;
 using P2.Cuberry.Framework.Helper;
+using Twainsoft.Cuberry.Articles.Properties;
 
 namespace Twainsoft.Cuberry.Articles.BusinessEntities
 {
@@ -16,7 +17,7 @@ namespace Twainsoft.Cuberry.Articles.BusinessEntities
             {
                 // TODO: EmptyID ist hier wohl falsch...
                 if (_validator == null)
-                    _validator = new P2Validator(Properties.Settings.Default.ModuleName, this.EntityName, "EmptyID", this);
+                    _validator = new P2Validator(Settings.Default.ModuleName, EntityName, "EmptyID", this);
                 return _validator;
             }
         }
