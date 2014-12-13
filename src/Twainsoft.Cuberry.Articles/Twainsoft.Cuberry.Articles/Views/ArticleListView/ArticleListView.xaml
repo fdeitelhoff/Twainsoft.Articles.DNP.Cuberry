@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Twainsoft.Cuberry.Articles.Views.ArticleListView.ArticleListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    
+             >
+
+    <Grid Name="grid1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="44" />
+            <RowDefinition Height="Auto" MinHeight="24"/>
+            <RowDefinition Height="Auto" MinHeight="50"/>
+ 
+        </Grid.RowDefinitions>
+
+        <Button Name="TestButton" Command="{Binding FillCommand}"> Fill Label</Button>
+        <Label Name="LabelToFill" Grid.Row="1" Content="{Binding LabelValue}" />
+        <InkCanvas x:Name="ic"  Grid.Row="2"  />
+
+    </Grid>
+</UserControl>
