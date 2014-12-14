@@ -18,8 +18,8 @@
 
 namespace Twainsoft.Cuberry.Articles.Views.ArticleListView
 {    
-    public interface IEmptyListView
+    public interface IArticlesListView
     {
-        IEmptyListPresenter Model { get; set; }
+        IArticlesListPresenter Model { get; set; }
     }
 }

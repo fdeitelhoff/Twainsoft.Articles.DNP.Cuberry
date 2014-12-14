@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Twainsoft.Cuberry.Articles.Views.ArticleListView.ArticleListView"
+﻿<UserControl x:Class="Twainsoft.Cuberry.Articles.Views.ArticleListView.ArticlesListView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     

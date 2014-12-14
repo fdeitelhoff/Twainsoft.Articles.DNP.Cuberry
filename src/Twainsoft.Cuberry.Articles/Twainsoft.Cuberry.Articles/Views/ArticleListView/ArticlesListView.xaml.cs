@@ -27,10 +27,25 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //===========================================================================================================================
 
+using System.Windows.Controls;
+
 namespace Twainsoft.Cuberry.Articles.Views.ArticleListView
-{   
-    public interface IEmptyListPresenter
+{
+    /// <summary>
+    /// Interaction logic for FiFiscalYearsListView.xaml
+    /// </summary>
+    public partial class ArticlesListView : IArticlesListView
     {
-        IEmptyListView View { get; set; }
+        public ArticlesListView()
+        {
+            InitializeComponent();
+        }
+
+        public IArticlesListPresenter Model
+        {
+            get { return DataContext as IArticlesListPresenter; }
+            set { DataContext = value; }
+        }
+        
     }
 }

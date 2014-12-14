@@ -8,15 +8,15 @@ using Twainsoft.Cuberry.Articles.Events;
 
 namespace Twainsoft.Cuberry.Articles.Views.ArticleListView
 {
-    public class ArticleListPresenter : IEmptyListPresenter, INotifyPropertyChanged
+    public class ArticlesListPresenter : IArticlesListPresenter, INotifyPropertyChanged
     {
         private IEventAggregator _eventAggregator;
         private IUnityContainer container;
         private IRegionManager regionManager;
 
-        public IEmptyListView View { get; set; }
+        public IArticlesListView View { get; set; }
 
-        public ArticleListPresenter(IEmptyListView view, IEventAggregator eventAggregator,
+        public ArticlesListPresenter(IArticlesListView view, IEventAggregator eventAggregator,
             IUnityContainer container, IRegionManager regionManager)//!!Ex02.3
         {
             View = view;
