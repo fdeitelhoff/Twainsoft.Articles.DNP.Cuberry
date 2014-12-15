@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel;
 using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.Events;
@@ -14,7 +15,13 @@ namespace Twainsoft.Cuberry.Articles.Views.ArticleListView
         private IUnityContainer container;
         private IRegionManager regionManager;
 
+        public event EventHandler<DataEventArgs<Article>> ArticleSelected;
+        public event EventHandler<DataEventArgs<Article>> ArticleOpened;
         public IArticlesListView View { get; set; }
+        public void FindArticle(Article article)
+        {
+            throw new System.NotImplementedException();
+        }
 
         public ArticlesListPresenter(IArticlesListView view, IEventAggregator eventAggregator,
             IUnityContainer container, IRegionManager regionManager)//!!Ex02.3

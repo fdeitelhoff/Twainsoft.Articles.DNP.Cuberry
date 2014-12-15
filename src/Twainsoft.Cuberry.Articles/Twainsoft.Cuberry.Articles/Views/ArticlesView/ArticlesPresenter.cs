@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using System.Windows;
 using Microsoft.Practices.Prism.Events;
 using Microsoft.Practices.Prism.Regions;
@@ -22,16 +23,16 @@ namespace Twainsoft.Cuberry.Articles.Views.ArticlesView
             {
                 this.container = container;
                 this.regionManager = regionManager;
-                this.View = view;
+                View = view;
                 this.listPresenter = listPresenter;
-                //this.listPresenter.SCProductSelected += new EventHandler<DataEventArgs<BusinessEntities.SCProduct>>(this.OnSCProductSelected);
-                //this.listPresenter.SCProductOpened += new EventHandler<DataEventArgs<BusinessEntities.SCProduct>>(this.OnSCProductOpened);
+                this.listPresenter.ArticleSelected += OnArticleSelected;
+                this.listPresenter.ArticleOpened += OnArticleOpened;
                 
                 View.SetHeader(listPresenter.View);
             }
             catch (Exception ex) //AM:TC
             {
-                P2ExceptionHandler.LogException(ex, string.Format("{0}.{1}", this.GetType().Name, System.Reflection.MethodInfo.GetCurrentMethod().Name));
+                P2ExceptionHandler.LogException(ex, string.Format("{0}.{1}", GetType().Name, MethodBase.GetCurrentMethod().Name));
             }
         }
 
@@ -39,12 +40,12 @@ namespace Twainsoft.Cuberry.Articles.Views.ArticlesView
         public IArticlesView View { get; set; }
 
 
-        public void OnSCProductSelected(object sender, DataEventArgs<Article> e)
+        public void OnArticleSelected(object sender, DataEventArgs<Article> e)
         {            
         }
 
 
-        public void OnSCProductOpened(object sender, DataEventArgs<Article> e)
+        public void OnArticleOpened(object sender, DataEventArgs<Article> e)
         {   
             try
             {
@@ -61,12 +62,12 @@ namespace Twainsoft.Cuberry.Articles.Views.ArticlesView
             }
             catch (Exception ex) //AM:TC
             {
-                P2ExceptionHandler.LogException(ex, string.Format("{0}.{1}", this.GetType().Name, System.Reflection.MethodInfo.GetCurrentMethod().Name));
+                P2ExceptionHandler.LogException(ex, string.Format("{0}.{1}", GetType().Name, MethodBase.GetCurrentMethod().Name));
             }
         }
 
 
-        public void OnSCProductFind(object sender, DataEventArgs<Article> e) //needed???
+        public void OnArticlesFind(object sender, DataEventArgs<Article> e) //needed???
         {
             if (listPresenter != null)
             {

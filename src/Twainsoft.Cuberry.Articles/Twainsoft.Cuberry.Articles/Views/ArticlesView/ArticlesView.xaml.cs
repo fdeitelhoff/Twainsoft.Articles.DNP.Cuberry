@@ -15,7 +15,7 @@ namespace Twainsoft.Cuberry.Articles.Views.ArticlesView
 
         public void SetHeader(IArticlesListView scProductsListView)
         {
-            this.HeaderPanel.Content = scProductsListView;
+            HeaderPanel.Content = scProductsListView;
         }
     }
 }
