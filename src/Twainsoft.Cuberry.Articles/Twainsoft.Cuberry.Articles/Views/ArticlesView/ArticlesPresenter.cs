@@ -1,6 +1,5 @@
 using System;
 using System.Reflection;
-using System.Windows;
 using Microsoft.Practices.Prism.Events;
 using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.Unity;
@@ -30,7 +29,7 @@ namespace Twainsoft.Cuberry.Articles.Views.ArticlesView
                 
                 View.SetHeader(listPresenter.View);
             }
-            catch (Exception ex) //AM:TC
+            catch (Exception ex)
             {
                 P2ExceptionHandler.LogException(ex, string.Format("{0}.{1}", GetType().Name, MethodBase.GetCurrentMethod().Name));
             }
@@ -57,21 +56,20 @@ namespace Twainsoft.Cuberry.Articles.Views.ArticlesView
             pm.Dispose();
             pm = null;
             dv = null;*/
-            // TODO: Fabian - Echt jetzt? Was hat es hiermit auf sich?
             GC.Collect();
             }
-            catch (Exception ex) //AM:TC
+            catch (Exception ex)
             {
                 P2ExceptionHandler.LogException(ex, string.Format("{0}.{1}", GetType().Name, MethodBase.GetCurrentMethod().Name));
             }
         }
 
 
-        public void OnArticlesFind(object sender, DataEventArgs<Article> e) //needed???
+        public void OnArticlesFind(object sender, DataEventArgs<Article> e)
         {
             if (listPresenter != null)
             {
-                //listPresenter.FindSCProduct(e.Value);
+                listPresenter.FindArticle(e.Value);
             }
         }
 

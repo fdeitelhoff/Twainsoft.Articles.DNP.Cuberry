@@ -4,6 +4,6 @@ namespace Twainsoft.Cuberry.Articles.Views.ArticlesView
 {
     public interface IArticlesView
     {
-        void SetHeader(IArticlesListView scProductsListView);
+        void SetHeader(IArticlesListView articlesListView);
     }
 }
