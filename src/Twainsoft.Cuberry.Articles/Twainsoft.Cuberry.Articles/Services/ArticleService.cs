@@ -10,5 +10,10 @@ namespace Twainsoft.Cuberry.Articles.Services
         {
             throw new NotImplementedException();
         }
+
+        public ObservableCollection<Article> All(Article templateArticle)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

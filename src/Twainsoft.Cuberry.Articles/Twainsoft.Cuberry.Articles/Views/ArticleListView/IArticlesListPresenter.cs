@@ -8,6 +8,7 @@ namespace Twainsoft.Cuberry.Articles.Views.ArticleListView
     {
         event EventHandler<DataEventArgs<Article>> ArticleSelected;
         event EventHandler<DataEventArgs<Article>> ArticleOpened;
+
         IArticlesListView View { get; set; }
 
         void FindArticle(Article article);
