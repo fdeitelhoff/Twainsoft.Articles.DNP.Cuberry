@@ -19,7 +19,6 @@ namespace Twainsoft.Cuberry.Articles.BusinessEntities
         {
             get
             {
-                // TODO: EmptyID ist hier wohl falsch...
                 if (_validator == null)
                     _validator = new P2Validator(Settings.Default.ModuleName, EntityName, "ArticleID", this);
                 return _validator;

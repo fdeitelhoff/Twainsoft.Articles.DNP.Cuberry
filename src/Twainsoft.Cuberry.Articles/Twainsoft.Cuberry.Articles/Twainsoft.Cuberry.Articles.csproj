@@ -92,6 +92,7 @@
     </Compile>
     <Compile Include="Views\ArticleListView\IArticlesListPresenter.cs" />
     <Compile Include="Views\ArticleListView\IArticlesListView.cs" />
+    <Compile Include="Views\ArticlesDetailsView\IArticlesDetailsView.cs" />
     <Compile Include="Views\ArticlesView\IArticlesView.cs" />
     <Compile Include="Views\ArticlesView\ArticlesPresenter.cs" />
     <Compile Include="Views\ArticlesView\ArticlesView.xaml.cs">
