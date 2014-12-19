@@ -78,6 +78,7 @@
     <Compile Include="ArticleModule.cs" />
     <Compile Include="BusinessEntities\Article.cs" />
     <Compile Include="Events\FindArticleEvent.cs" />
+    <Compile Include="PresentationModels\ArticlesDetailsPresentationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

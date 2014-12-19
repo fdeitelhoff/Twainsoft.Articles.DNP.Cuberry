@@ -1,12 +1,11 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
+using Twainsoft.Cuberry.Articles.PresentationModels;
 
 namespace Twainsoft.Cuberry.Articles.Views.ArticlesDetailsView
 {
     interface IArticlesDetailsView
     {
-        // TODO: Correct model needs to be implemented.
-        //SCProductsDetailsPresentationModel Model { get; set; }
+        ArticlesDetailsPresentationModel Model { get; set; }
         bool? ShowDialog();
         FlowDirection FlowDirection { get; set; }
         void UpdateFocusedControl();
