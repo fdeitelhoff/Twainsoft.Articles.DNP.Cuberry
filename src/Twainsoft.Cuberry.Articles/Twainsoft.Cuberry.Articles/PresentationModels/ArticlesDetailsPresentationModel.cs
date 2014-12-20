@@ -14,6 +14,8 @@ namespace Twainsoft.Cuberry.Articles.PresentationModels
         public event PropertyChangedEventHandler PropertyChanged;
 
         public string Error { get; private set; }
+        public bool IsReadOnly { get; set; }
+        public bool ModelIsModified { get; set; }
 
         /*public ArticlesDetailsPresentationModel(ISCProductsDetailsView view, BusinessEntities.SCProduct model, Services.ISCProductService service,
     IUnityContainer container, IRegionManager regionManager)
@@ -58,6 +60,11 @@ namespace Twainsoft.Cuberry.Articles.PresentationModels
         public string this[string columnName]
         {
             get { throw new NotImplementedException(); }
+        }
+
+        public void Save()
+        {
+            throw new NotImplementedException();
         }
     }
 }

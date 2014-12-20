@@ -94,6 +94,9 @@
     <Compile Include="Views\ArticleListView\IArticlesListPresenter.cs" />
     <Compile Include="Views\ArticleListView\IArticlesListView.cs" />
     <Compile Include="Views\ArticlesDetailsView\IArticlesDetailsView.cs" />
+    <Compile Include="Views\ArticlesDetailsView\ArticlesDetailsView.xaml.cs">
+      <DependentUpon>ArticlesDetailsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ArticlesView\IArticlesView.cs" />
     <Compile Include="Views\ArticlesView\ArticlesPresenter.cs" />
     <Compile Include="Views\ArticlesView\ArticlesView.xaml.cs">
@@ -112,10 +115,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\ArticlesDetailsView\ArticlesDetailsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\ArticlesView\ArticlesView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\add.png" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\clear.png" />
+    <Content Include="Images\CuberryIcon32.ico" />
+    <Content Include="Images\find.png" />
+    <Content Include="Images\find16.gif" />
+    <Content Include="Images\printer2.png" />
+    <Content Include="Images\save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
