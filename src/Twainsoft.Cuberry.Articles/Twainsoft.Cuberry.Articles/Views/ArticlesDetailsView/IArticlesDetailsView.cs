@@ -3,7 +3,7 @@ using Twainsoft.Cuberry.Articles.PresentationModels;
 
 namespace Twainsoft.Cuberry.Articles.Views.ArticlesDetailsView
 {
-    interface IArticlesDetailsView
+    public interface IArticlesDetailsView
     {
         ArticlesDetailsPresentationModel Model { get; set; }
         bool? ShowDialog();

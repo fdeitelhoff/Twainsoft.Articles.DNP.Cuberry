@@ -6,6 +6,8 @@ using Twainsoft.Cuberry.Articles.Properties;
 
 namespace Twainsoft.Cuberry.Articles.BusinessEntities
 {
+    // TODO: Add more attributes for this data class!
+    // TODO: Implement missing methods - especially for the data access!
     public class Article : BizObject, INotifyPropertyChanged
     {
         public int ArticleId { get; protected set; }
@@ -20,7 +22,7 @@ namespace Twainsoft.Cuberry.Articles.BusinessEntities
             get
             {
                 if (_validator == null)
-                    _validator = new P2Validator(Settings.Default.ModuleName, EntityName, "ArticleID", this);
+                    _validator = new P2Validator(Settings.Default.ModuleName, EntityName, "ArticleId", this);
                 return _validator;
             }
         }
@@ -31,6 +33,11 @@ namespace Twainsoft.Cuberry.Articles.BusinessEntities
         {
             var handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public void InsertAndUpdate(P2MessageStack messageStack, bool checkDoublicate)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
