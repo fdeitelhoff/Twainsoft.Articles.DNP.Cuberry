@@ -1,8 +1,6 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Input;
 using P2.Cuberry.Framework.Helper;
 using Twainsoft.Cuberry.Articles.PresentationModels;

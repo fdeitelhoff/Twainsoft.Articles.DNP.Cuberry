@@ -6,14 +6,58 @@ using Twainsoft.Cuberry.Articles.Properties;
 
 namespace Twainsoft.Cuberry.Articles.BusinessEntities
 {
-    // TODO: Add more attributes for this data class!
     // TODO: Implement missing methods - especially for the data access!
     public class Article : BizObject, INotifyPropertyChanged
     {
         public int ArticleId { get; protected set; }
 
+        string name;
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                if (name != value)
+                {
+                    name = value;
+                    Modified = true;
+                }
+            }
+        }
+
+        string description;
+        public string Description
+        {
+            get { return description; }
+            set
+            {
+                if (description != value)
+                {
+                    description = value;
+                    Modified = true;
+                }
+            }
+        }
+
+        double? pages = 0;
+        public double? Pages
+        {
+            get { return pages; }
+            set
+            {
+                if (pages != value)
+                {
+                    pages = value;
+                    Modified = true;
+                }
+            }
+        }
+
         public Article()
         {
+            name = string.Empty;
+            description = string.Empty;
+
             Modified = false;
         }
 
