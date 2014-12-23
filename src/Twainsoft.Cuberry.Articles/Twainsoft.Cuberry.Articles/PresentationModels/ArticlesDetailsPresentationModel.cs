@@ -55,6 +55,45 @@ namespace Twainsoft.Cuberry.Articles.PresentationModels
             get { return Model.ArticleId; }
         }
 
+        public string Name
+        {
+            get { return Model.Name; }
+            set
+            {
+                if (value != Model.Name)
+                {
+                    Model.Name = value;
+                    OnPropertyChanged("Name");
+                }
+            }
+        }
+
+        public string Description
+        {
+            get { return Model.Description; }
+            set
+            {
+                if (value != Model.Description)
+                {
+                    Model.Description = value;
+                    OnPropertyChanged("Description");
+                }
+            }
+        }
+
+        public double? Pages
+        {
+            get { return Model.Pages; }
+            set
+            {
+                if (value != Model.Pages)
+                {
+                    Model.Pages = value;
+                    OnPropertyChanged("Pages");
+                }
+            }
+        }
+
         public ArticlesDetailsPresentationModel(IArticlesDetailsView view, Article model, ArticleService service, 
             IUnityContainer container, IRegionManager regionManager)
         {
