@@ -14,7 +14,6 @@ using Twainsoft.Cuberry.Articles.Views.ArticlesDetailsView;
 
 namespace Twainsoft.Cuberry.Articles.PresentationModels
 {
-    // TODO: Add those missing attributes I'll add later to the articles class!
     // TODO: Add missing methods - I still think there are some missing...
     public class ArticlesDetailsPresentationModel : INotifyPropertyChanged, IDisposable, IDataErrorInfo
     {
@@ -36,16 +35,16 @@ namespace Twainsoft.Cuberry.Articles.PresentationModels
         public DelegateCommand<object> ArticleCloseCommand { get; set; }
         public DelegateCommand<object> FiTransactionPrintCommand { get; set; }
 
-        protected P2MessageStack _myMessageStack = new P2MessageStack();
+        protected P2MessageStack messageStack = new P2MessageStack();
         public P2MessageStack MessageStack
         {
             get
             {
-                return _myMessageStack;
+                return messageStack;
             }
             set
             {
-                _myMessageStack = value;
+                messageStack = value;
                 OnPropertyChanged("MessageStack");
             }
         }
@@ -211,8 +210,10 @@ namespace Twainsoft.Cuberry.Articles.PresentationModels
             try
             {
                 ControlRights = Model.GetControls(Settings.Default.ModuleName, "ArticlesDetailsView");
-                // TODO: Notify the correct attributes.
-                //OnPropertyChanged("ProductID");
+                OnPropertyChanged("ArticleId");
+                OnPropertyChanged("Name");
+                OnPropertyChanged("Description");
+                OnPropertyChanged("Pages");
 
                 ArticleCloseCommand.RaiseCanExecuteChanged();
                 ArticleSaveCommand.RaiseCanExecuteChanged();

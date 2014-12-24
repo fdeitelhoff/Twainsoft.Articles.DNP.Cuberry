@@ -20,8 +20,6 @@ namespace Twainsoft.Cuberry.Articles.Views.ArticlesDetailsView
             set
             {                
                 DataContext = value;
-                // TODO: Change the sorting!
-                //VATCategoryID.Items.SortDescriptions.Add(new SortDescription("VATCategoryNameCur", ListSortDirection.Ascending));                
             }
         }
 
