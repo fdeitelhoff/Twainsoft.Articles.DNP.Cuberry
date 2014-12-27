@@ -188,7 +188,8 @@ namespace Twainsoft.Cuberry.Articles.PresentationModels
 
         public bool Save()
         {
-            bool isNewItem = (ArticleId <= 0);
+            // Really necessary?
+            var isNewItem = (ArticleId <= 0);
             MessageStack.Clear();
             Model.InsertAndUpdate(MessageStack, true);
 
